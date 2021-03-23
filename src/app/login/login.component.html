@@ -1,0 +1,14 @@
+
+<div class="loginpage">
+          <form name="form"  (ngSubmit)="Login()">
+              <label class="centertext">Login</label>
+            <input type="text" class="form-control" [(ngModel)]="login.Username" placeholder="Email username"
+              [ngModelOptions]="{standalone: true}" />
+
+              <input type="text" class="form-control" [(ngModel)]="login.Password" placeholder="Email username"
+              [ngModelOptions]="{standalone: true}" />
+
+<button class="btn btn-sm btn-danger btn-block" >Login</button>
+</form>
+<label *ngIf="LoginError.length>0">{{LoginError}}</label>
+</div>

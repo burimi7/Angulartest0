@@ -1,0 +1,17 @@
+.loginpage {
+    margin: 0 auto;
+    border: 1px solid red;
+    border-radius: 10px;
+    width: 50%;
+    margin-top:5%;
+    padding: 20px;
+    background-color: antiquewhite;
+}
+.centertext{
+    text-align: center;
+    width: 100%;
+}
+
+input{
+    margin-bottom:5px;
+}

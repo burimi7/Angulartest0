@@ -1,0 +1,34 @@
+<button class="btn btn-sm btn-success" *ngIf="Selected_i>=0 && Selected_j>=0" (click)="Save()">Save</button>
+<button class="btn btn-sm btn-light"  *ngIf="Selected_i>=0 && Selected_j>=0" (click)="Cancel()">Cancel</button>
+   <label *ngIf="Info.length>0">{{Info}}</label>
+   <table class="table table-sm ">
+    <thead>
+        <tr>
+            <th *ngFor="let displayedColumns_i of displayedColumns[0]; let i=index"
+            id="{{i}}" >
+Col{{i}}
+            </th>
+        </tr>
+    </thead>
+    <tbody>      
+        <tr *ngFor="let displayedColumns_i of displayedColumns; let i=index">            
+            <td *ngFor="let displayedColumns_j of displayedColumns_i; let j=index" style="overflow: hidden;">  
+                <label (click)="Selected_i=i;Selected_j=j;ValueToEdit=displayedColumns[i][j];Info=''" *ngIf="Selected_i!=i || Selected_j!=j" >{{displayedColumns_j}} </label>
+                <input type="text" [(ngModel)]="ValueToEdit" *ngIf="Selected_i==i && Selected_j==j"/>
+                
+            </td>
+        </tr>
+    </tbody>
+    </table> 
+<!--     
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+        <ng-container *ngFor="let column of displayedColumns; let i = index" [matColumnDef]="column">
+          <th mat-header-cell *matHeaderCellDef [resizeColumn]="true"
+              [index]="i"> <span>{{column}} </span></th>
+          <td mat-cell *matCellDef="let element"> {{element[column]}} </td>
+        </ng-container>
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table> -->
