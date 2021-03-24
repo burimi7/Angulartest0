@@ -22,9 +22,9 @@ export class MainComponent implements OnInit {
   }
 
   async GenerateData(){
-    for(var i=0;i<60;i++){
+    for(var i=0;i<6000;i++){
       let j_array=[];
-      for(var j=0;j<10;j++){
+      for(var j=0;j<100;j++){
         j_array.push(this.RandomText(100))
       } 
       this.displayedColumns.push(j_array);
