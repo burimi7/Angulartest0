@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { MainComponent } from './main/main.component';
 import { FormsModule} from "@angular/forms";
+import { ScrollingModule } from '@angular/cdk/scrolling';
+
 
 
 @NgModule({
@@ -16,7 +18,8 @@ import { FormsModule} from "@angular/forms";
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,FormsModule
+    AppRoutingModule,FormsModule,
+    ScrollingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
